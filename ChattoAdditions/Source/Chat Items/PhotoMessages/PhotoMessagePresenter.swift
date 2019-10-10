@@ -25,12 +25,11 @@
 import UIKit
 import Chatto
 
-open class PhotoMessagePresenter<ViewModelBuilderT, InteractionHandlerT>
-: BaseMessagePresenter<PhotoBubbleView, ViewModelBuilderT, InteractionHandlerT> where
+open class PhotoMessagePresenter<ViewModelBuilderT, InteractionHandlerT>: BaseMessagePresenter<PhotoBubbleView, ViewModelBuilderT, InteractionHandlerT> where
     ViewModelBuilderT: ViewModelBuilderProtocol,
     ViewModelBuilderT.ViewModelT: PhotoMessageViewModelProtocol,
     InteractionHandlerT: BaseMessageInteractionHandlerProtocol,
-    InteractionHandlerT.ViewModelT == ViewModelBuilderT.ViewModelT {
+InteractionHandlerT.ViewModelT == ViewModelBuilderT.ViewModelT {
     public typealias ModelT = ViewModelBuilderT.ModelT
     public typealias ViewModelT = ViewModelBuilderT.ViewModelT
 

@@ -127,6 +127,8 @@ class LiveCameraCell: UICollectionViewCell {
             self.iconImageView.image = self.appearance.cameraImageProvider()
         case .restricted, .denied:
             self.iconImageView.image = self.appearance.cameraLockImageProvider()
+        default:
+            break
         }
         self.setNeedsLayout()
     }
